@@ -1,103 +1,82 @@
-import Image from "next/image";
+// pages/index.jsx
+"use client";
+
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main
+      style={{
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        background: "linear-gradient(180deg,#f7f9fb,#e2e8f0)",
+        padding: "24px",
+      }}
+    >
+      <div
+        style={{
+          textAlign: "center",
+          background: "#ffffff",
+          padding: "48px 32px",
+          borderRadius: "16px",
+          boxShadow: "0 12px 40px rgba(15,23,42,0.1)",
+          maxWidth: "480px",
+          width: "100%",
+        }}
+      >
+        <h1
+          style={{
+            fontSize: "clamp(1.8rem, 5vw, 2.5rem)",
+            fontWeight: "800",
+            color: "#0b1220",
+            margin: 0,
+          }}
+        >
+          Welcome to ESCEE
+        </h1>
+        <p
+          style={{
+            fontSize: "clamp(1rem, 3vw, 1.2rem)",
+            fontWeight: "500",
+            color: "#6b7280",
+            margin: "14px 0 32px",
+          }}
+        >
+          Industries Private Limited
+        </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link
+          href="/casual-labour"
+          style={{
+            display: "inline-block",
+            width: "100%",
+            padding: "18px 20px",
+            borderRadius: "12px",
+            background: "linear-gradient(90deg,#2563eb,#1d4ed8)",
+            color: "#ffffff",
+            fontSize: "clamp(1.1rem, 3vw, 1.4rem)",
+            fontWeight: "700",
+            textDecoration: "none",
+            letterSpacing: "0.5px",
+            boxShadow: "0 12px 30px rgba(37,99,235,0.3)",
+            transition: "all 0.2s ease",
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = "translateY(-3px) scale(1.02)";
+            e.currentTarget.style.boxShadow =
+              "0 18px 36px rgba(37,99,235,0.4)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "none";
+            e.currentTarget.style.boxShadow =
+              "0 12px 30px rgba(37,99,235,0.3)";
+          }}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          🚀 Open Labour Form
+        </Link>
+      </div>
+    </main>
   );
 }

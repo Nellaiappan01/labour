@@ -2,6 +2,67 @@
    Light, airy, minimal UI — mobile-first
    Replace the current file with this content
 */
+/* styles/landing.css
+   Simple landing page with call-to-action
+*/
+
+:root {
+  --bg: #f7f9fb;
+  --text: #0b1220;
+  --muted: #6b7280;
+  --accent: #2563eb; /* blue */
+  --accent-hover: #1e40af;
+}
+
+.landing-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  padding: 24px;
+}
+
+.hero-card {
+  text-align: center;
+  background: #ffffff;
+  padding: 40px 28px;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(15,23,42,0.08);
+  max-width: 460px;
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--muted);
+  margin: 10px 0 24px;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.18s ease, transform 0.12s ease;
+}
+
+.hero-btn:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
 
 /* ---------- Theme variables ---------- */
 :root{
