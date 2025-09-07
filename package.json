@@ -1,0 +1,29 @@
+{
+  "name": "my-escee",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "bull": "^4.16.5",
+    "dotenv": "^17.2.2",
+    "ioredis": "^5.7.0",
+    "mongoose": "^8.18.0",
+    "next": "15.5.2",
+    "node-fetch": "^3.3.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.2",
+    "nodemon": "^3.1.10",
+    "tailwindcss": "^4"
+  }
+}
