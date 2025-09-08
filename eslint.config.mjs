@@ -10,7 +10,11 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+<<<<<<< HEAD
   ...compat.extends("next/core-web-vitals"),
+=======
+  ...compat.extends("next/core-web-vitals", "next/typescript"),
+>>>>>>> a8773ad (file)
   {
     ignores: [
       "node_modules/**",
